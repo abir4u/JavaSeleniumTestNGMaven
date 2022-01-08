@@ -14,8 +14,11 @@ import cucumber.api.testng.TestNGCucumberRunner;
 @CucumberOptions(
         strict = true,
         features = "src/test/java/features",
-        glue = "stepDefinitions",
-        plugin = {"json:target/cucumber"}
+        glue = "stepdefinitions",
+        plugin = { "pretty", "json:target/cucumber-reports/Cucumber.json",
+                "junit:target/cucumber-reports/Cucumber.xml",
+                "html:target/cucumber-reports"},
+        monochrome = true
 )
 
 public class TestRunner extends Hooks {

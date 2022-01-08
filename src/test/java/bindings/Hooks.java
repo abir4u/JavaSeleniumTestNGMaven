@@ -48,7 +48,7 @@ public class Hooks extends Base {
         if (null != _browser && !_browser.isEmpty()) {
             browser = _browser;
         } else {
-            browser = "firefox";
+            browser = "chrome";
         }
         switch (browser.toLowerCase()) {
             case "chrome":
@@ -61,9 +61,7 @@ public class Hooks extends Base {
             default:
                 throw new Error("Unknown browser");
         }
-
-        getPage("https://softwareimprove.wordpress.com/");
-
+        
         return driver;
     }
 

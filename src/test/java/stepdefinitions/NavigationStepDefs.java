@@ -1,13 +1,13 @@
 package stepdefinitions;
 
-import cucumber.api.java.en.And;
-import pages.Base;
+import factory.DriverFactory;
+import io.cucumber.java.en.And;
 
-public class NavigationStepDefs extends Base {
+public class NavigationStepDefs {
 
     @And("^I am on the landing page$")
     public void i_am_on_the_landing_page() {
-        getPage("https://softwareimprove.wordpress.com/");
+        DriverFactory.getDriver().get("https://softwareimprove.wordpress.com/");
     }
 
 }

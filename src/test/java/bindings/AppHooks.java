@@ -31,6 +31,12 @@ public class AppHooks {
         driver = driverFactory.initDriver(browser);
     }
 
+    @Before(order = 2)
+    public void loadLandingPage() {
+        String landingPageUrl = properties.getProperty("url");
+        driver.get(landingPageUrl);
+    }
+
     @After(order = 1)
     public void tearDown(Scenario scenario) {
         if (scenario.isFailed()) {

@@ -27,6 +27,10 @@ public class DriverFactory {
 
         getDriver().manage().deleteAllCookies();
 
+        // You may want to uncomment the below line of code
+        // if you wish to run the text cases in full screen.
+        // getDriver().manage().window().fullscreen();
+
         return getDriver();
     }
 
@@ -45,6 +49,8 @@ public class DriverFactory {
         String path = System.getProperty("user.dir") + "/src/test/supportingFiles/drivers/";
 
         if (System.getProperty("os.name").contains("Win")) {
+            // PLEASE NOTE THAT THE WINDOWS DRIVER MAY BE OUTDATED.
+            // IT COULD NOT BE TESTED AS I POSSESS A MACBOOK ONLY.
             System.setProperty("webdriver.chrome.driver", path + "win/chromedriver.exe");
             System.setProperty("webdriver.firefox.marionette", path + "win/geckodriver.exe");
 

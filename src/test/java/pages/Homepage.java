@@ -1,23 +1,25 @@
 package pages;
 
-import org.openqa.selenium.By;
+import factory.SharedWrappers;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
-public class Homepage {
+public class Homepage extends SharedWrappers {
 
     private WebDriver driver;
-
-    private By primeLogo = By.className("customlogolink");
-
     public Homepage(WebDriver driver) {
         this.driver = driver;
+    }
+
+    private WebElement searchTextField() {
+        return inspectors.getElementByXpath("//input[@name='q']");
     }
 
     public String getHomePageTitle() {
         return driver.getTitle();
     }
 
-    public boolean isLogoExist() {
-        return driver.findElement(primeLogo).isDisplayed();
+    public void performSearch(String keyword) {
+        searchTextField().sendKeys(keyword + "\n");
     }
 }

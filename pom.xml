@@ -59,23 +59,6 @@
 
     </dependencies>
 
-<!--    The below repository is required to resolve "ralfstuckert/pdfbox-layout" issue, -->
-<!--    which gets introduced when adding extentreports-cucumber6-adapter dependency-->
-    <repositories>
-        <repository>
-            <id>mulesoft-releases</id>
-            <name>MuleSoft Repository</name>
-            <url>https://repository-master.mulesoft.org/releases/</url>
-            <layout>default</layout>
-        </repository>
-        <repository>
-            <id>mulesoft-snapshots</id>
-            <name>MuleSoft Snapshot Repository</name>
-            <url>https://repository-master.mulesoft.org/snapshots/</url>
-            <layout>default</layout>
-        </repository>
-    </repositories>
-
     <build>
         <plugins>
 

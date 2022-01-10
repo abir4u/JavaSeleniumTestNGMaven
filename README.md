@@ -22,7 +22,7 @@ Below is the technology stack used in this repository:
 6. Programming Language - Java
 7. Scenario Syntax - Gherkins
 8. Browsers - Chrome + Firefox
-9. Build tool - Maven
+9. Build tool - Maven + TestNG
 10. Reporting - Cucumber Online
 11. Report Evidence - Hosted Web Report + Screenshots attached
 11. Instruction for execution - Command provided on the first line of this README.md file

@@ -1,3 +1,4 @@
 # Ignore auto-generated test results
 /target/
 .idea/*
+UITest.iml

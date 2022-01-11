@@ -45,7 +45,7 @@ The automation framework created in this repository is aimed to keep the impleme
 
 ## How to integrate the project into the delivery pipeline
 
-Considering the best practices in the market, to integrate the project to a delivery pipeline, two things need to be considered:
+Considering the best practices in the market, to integrate the project to a delivery pipeline, three things need to be considered:
 - Continuous Integration - A good Branch Strategy backed by proper platform support is the key to this. The main idea behind the Git flow branching strategy is to isolate your work into different types of branches. There are five different branch types in total:
   - Branching:
     -   Main - The main branch contains the production-ready code

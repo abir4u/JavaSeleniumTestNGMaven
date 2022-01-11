@@ -43,6 +43,35 @@ The automation framework created in this repository is aimed to keep the impleme
 6. Parallel Execution - For quicker execution of tests, parallel test execution has been implemented using TestNG and Cucumber.
 7. Properties and configuration of properties: Since there may be some values in the project, which we may want to keep consolidated for greater accessibility, especially when carrying out distributed testing across different nodes, all such properties have kept in a single file and have been configured with FileReader.
 
+## How to integrate the project into the delivery pipeline
+
+Considering the best practices in the market, to integrate the project to a delivery pipeline, two things need to be considered:
+- Continuous Integration - A good Branch Strategy backed by proper platform support is the key to this. The main idea behind the Git flow branching strategy is to isolate your work into different types of branches. There are five different branch types in total:
+  - Branching:
+    -   Main - The main branch contains the production-ready code
+    -   Develop - This is the most up-to-date branch where the developers are continuously pushing in their latest reviewed code.
+    -   Release - This is the branch that contains the cut from develop branch that is agreed and approved for the next release. This is where Release Regression Automated Testing must be performed. A pipeline for regression must exist here.
+    -   Feature
+    -   Hotfix
+
+  - Peer Review with Pull Requests: It is very important that all forms of code are reviewed by peers before integration. Pull request must be created before integrating any branch to develop, and hence peer reviews are the most crucial aspect of Feature branches.
+
+  - Platform support: It is important to have separate environments for different branches. Below are the environments that must exist:
+    -   Production: This is the real-world user facing environment having the best infrastructure in respects.
+    -   Pre-production: This should be made like-to-like with the Prod environment and should be used for performance testing purpose.
+    -   Test: This environment should be used mainly for Functional and Security testing purposes.
+    -   Dev: This environment is used by developers.
+
+- Continuous Deployment - Jenkins is the most widely used tool for Continuous Deployment. Once the git repository is integrated to Jenkins, pipelines and jobs can be configured to control the integration of code appropriately.
+  - Pipelines crucial for Testing: For best quality code deployment, regression builds must be triggered automatically every time a new change is pushed into a major branch. If the regression fails based on the agreed criteria, the deployment will be interrupted and developers must re-review the code. Three pipelines that must have this implemented are:
+    -   Main
+    -   Develop
+    -   Release
+
+- Reduction in delivery timeline - UI Integration Tests can take a long time to execute. When there is a critical Production bug that needs to be fixed, the organisation can't wait for hours after bug fix to deploy the changes. To increase quality, if we have to compromise speed, then that is a problem. Hence, it is recommended to carry out UI Integration Tests in thhe form of distributed and parallel testing. This ensures diversity of scenarios in terms of platforms for execution and decreases the execution time exponentially. Selenium Grid on Cloud platforms using Cloud devices is a very efficient set up for tihs.
+
+
+
 Hope this was helpful to understand the repository. However, in case of any doubts feel free to reach out to me any time on my email abirpal16112@gmail.com or call me on 02102963036.
 
 Also, say hi to my selfie below before you leave. ;)

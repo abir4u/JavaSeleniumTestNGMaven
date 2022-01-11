@@ -39,7 +39,9 @@ The automation framework created in this repository is aimed to keep the impleme
 2. Behaviour Driven Development - This methodology has been used to make the test cases easy to understand for business stakeholders.
 3. Cucumber Reporting - This form of reporting has been used as it takes the least amount of time to implement, and yet provides with a presentable HTML report on a hosted platform available online and focus to charts and tables, when it comes to representing the data.
 4. DriverFactory - The project uses Multithreading technique to create multiple asynchronously running tests to cater to parallel execution.
-4. Reusable Wrapper Framework - A reusable wrapper framework has been used to showcase the subtleness of my work and level of detail that I go to even in short tasks like this one.
+5. Reusable Wrapper Framework - A reusable wrapper framework has been used to showcase the subtleness of my work and level of detail that I go to even in short tasks like this one.
+6. Parallel Execution - For quicker execution of tests, parallel test execution has been implemented using TestNG and Cucumber.
+7. Properties and configuration of properties: Since there may be some values in the project, which we may want to keep consolidated for greater accessibility, especially when carrying out distributed testing across different nodes, all such properties have kept in a single file and have been configured with FileReader.
 
 Hope this was helpful to understand the repository. However, in case of any doubts feel free to reach out to me any time on my email abirpal16112@gmail.com or call me on 02102963036.
 
